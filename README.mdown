@@ -5,21 +5,21 @@ Useful UIImage category for handling sprite sheets. This add-on smoothes the way
 
 This can be useful in UIImageView animations where animationImages array has to be filled with a set of images representing frames. UIImage-Sprite category makes this process trivial by introducing two methods:
 
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
+	+(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
+	+(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
 
 How to
 =======
 
 There are two methods in UIImage+Sprite category. First one:
 
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
+	+(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image spriteSize:(CGSize)size;
 
 The method returns an array with UIImages. Original sprite sheet (image) is sliced into smaller chunks, each of the specified size. 
 
 Second method is very similar:
 
-	-(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
+	+(NSArray *)spritesWithSpriteSheetImage:(UIImage *)image inRange:(NSRange)range spriteSize:(CGSize)size;
 
 This method does exactly the same thing as the latter. However, this time we can specify the range of the chunks we want to get.
 
